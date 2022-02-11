@@ -2,7 +2,7 @@
 //Count and Sum Of nodes in Binary Tree
 
 #include<iostream>
-#include<queue>
+
 using namespace std;
 
 struct Node
