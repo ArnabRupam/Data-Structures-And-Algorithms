@@ -1,21 +1,21 @@
 #include<iostream>
 using namespace std;
 
-void ReverseArr(int a[],int n)
+void swap(int &a,int &b)
 {
-    int s=0;
-    int e=n-1;
-    while(s<e)
-    {
-        int temp=a[s];
-        a[s]=a[e];
-        a[e]=temp;
-        s++;
-        e--;
-    }
+    int temp=a;
+    a=b;
+    b=temp;
 
 }
 
+void rotate(int a[],int n)
+{
+    for(int i=0;i<n-1;i++)
+    {
+        swap(a[i],a[n-1]);
+    }
+}
 
 int main()
 {
@@ -25,10 +25,9 @@ int main()
     int a[n];
     for(int i=0;i<n;i++)
     {
-
         cin>>a[i];
     }
-    ReverseArr(a,n);
+    rotate(a,n);
     for(int i=0;i<n;i++)
     {
         cout<<a[i]<<" ";
